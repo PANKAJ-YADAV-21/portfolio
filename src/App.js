@@ -15,7 +15,7 @@ const PROJECTS = [
   {
     title: 'Project-Cost-Timeline Predictor',
     date: 'Dec 2025',
-    github: 'https://github.com/PANKAJ-YADAV-21/portfolio',
+    github: 'https://github.com/HarshKumarhk07/project_cost_and_timeline_predictor',
     tech: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Node.js'],
     points: [
       'Engineered a web-based system to predict project cost and timelines, achieving ~20–25% improvement in planning accuracy vs manual estimation.',
@@ -27,7 +27,7 @@ const PROJECTS = [
   {
     title: 'Petrofy – Digital Patrolling Billing System',
     date: 'Apr 2025',
-    github: 'https://github.com/PANKAJ-YADAV-21/portfolio',
+    github: 'https://github.com/atharavtyagi/Petrofy',
     tech: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'PHP'],
     points: [
       'Designed and implemented a digital billing system with real-time, dynamic data handling using MySQL for instant updates.',
@@ -53,11 +53,12 @@ const TRAINING = [
 ];
 
 const CERTIFICATES = [
-  { title: 'Cloud Computing Certificate', issuer: 'NPTEL', date: 'Oct 2025' },
-  { title: 'Build Generative AI Apps with No-Code Tools', issuer: 'INFOSYS', date: 'Aug 2025' },
-  { title: 'ChatGPT-4 Prompt Engineering: GenerativeAI & LLM', issuer: 'INFOSYS', date: 'Aug 2025' },
-  { title: 'Computational Theory: Language Principles & Finite Automata', issuer: 'INFOSYS', date: 'Aug 2025' },
-  { title: 'Packet Switching Networks and Algorithms', issuer: 'COURSERA', date: 'Nov 2024' },
+  { title: 'Cloud Computing Certificate', issuer: 'NPTEL', date: 'Oct 2025', viewUrl: 'https://drive.google.com/file/d/1CWwjGQgLLEl0YSbWrX0rRHhN0qYen-HT/view', downloadUrl: 'https://drive.google.com/uc?export=download&id=1CWwjGQgLLEl0YSbWrX0rRHhN0qYen-HT' },
+  { title: 'Build Generative AI Apps with No-Code Tools', issuer: 'INFOSYS', date: 'Aug 2025', viewUrl: 'https://drive.google.com/file/d/1HUZ0Ji4kBj7MVCH51Rcu6ReRV2gwjEyW/view', downloadUrl: 'https://drive.google.com/uc?export=download&id=1HUZ0Ji4kBj7MVCH51Rcu6ReRV2gwjEyW' },
+  { title: 'ChatGPT-4 Prompt Engineering: GenerativeAI & LLM', issuer: 'INFOSYS', date: 'Aug 2025', viewUrl: 'https://drive.google.com/file/d/18xA02ZGfFY93XzawMpNQWiaZ6tmJGczy/view', downloadUrl: 'https://drive.google.com/uc?export=download&id=18xA02ZGfFY93XzawMpNQWiaZ6tmJGczy' },
+  { title: 'Computational Theory: Language Principles & Finite Automata', issuer: 'INFOSYS', date: 'Aug 2025', viewUrl: 'https://drive.google.com/file/d/1iQ9HMab06McWMVTh7nq8FgdjUfd0iurt/view', downloadUrl: 'https://drive.google.com/uc?export=download&id=1iQ9HMab06McWMVTh7nq8FgdjUfd0iurt' },
+  { title: 'Packet Switching Networks and Algorithms', issuer: 'COURSERA', date: 'Nov 2024', viewUrl: 'https://drive.google.com/file/d/1zKdK5aCLk7blF8ck3_c5dz5oEFWrhaJl/view', downloadUrl: 'https://drive.google.com/uc?export=download&id=1zKdK5aCLk7blF8ck3_c5dz5oEFWrhaJl' },
+  { title: 'New Training Certificate', issuer: 'Your Issuer', date: 'Mar 2026', viewUrl: 'https://drive.google.com/file/d/1USls_vmcQZvjSK-scHM2OAZCQ4pcpYBc/view', downloadUrl: 'https://drive.google.com/uc?export=download&id=1USls_vmcQZvjSK-scHM2OAZCQ4pcpYBc' },
 ];
 
 const ACHIEVEMENTS = [
@@ -502,8 +503,37 @@ function Training() {
                 </li>
               ))}
             </ul>
+            {(t.viewUrl || t.downloadUrl) && (
+              <div style={{ marginTop: '1rem', display: 'flex', gap: '0.55rem', flexWrap: 'wrap' }}>
+                {t.viewUrl && (
+                  <a href={t.viewUrl} target="_blank" rel="noreferrer" style={{
+                    padding: '0.4rem 0.85rem', borderRadius: '8px', fontSize: '0.8rem', fontWeight: 600,
+                    background: 'rgba(108,99,255,0.15)', color: 'var(--accent)', textDecoration: 'none',
+                  }}>👁 View</a>
+                )}
+                {t.downloadUrl && (
+                  <a href={t.downloadUrl} download style={{
+                    padding: '0.4rem 0.85rem', borderRadius: '8px', fontSize: '0.8rem', fontWeight: 600,
+                    background: 'rgba(67,232,176,0.15)', color: 'var(--accent)', textDecoration: 'none',
+                  }}>↓ Download</a>
+                )}
+              </div>
+            )}
           </div>
         ))}
+        <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center' }}>
+          <a href="https://drive.google.com/uc?export=download&id=14BHqjHKJaB6mlzVcZ_38cgIxSHaIgfCN" download style={{
+            padding: '0.65rem 2rem', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 600,
+            background: 'linear-gradient(135deg, #6c63ff, #43e8b0)',
+            color: '#fff', textDecoration: 'none',
+            boxShadow: '0 8px 24px rgba(108,99,255,0.35)',
+            transition: 'all 0.2s',
+            display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
+          }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(108,99,255,0.5)'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 8px 24px rgba(108,99,255,0.35)'; }}
+          >📄 Download Resume</a>
+        </div>
       </div>
     </section>
   );
@@ -536,9 +566,46 @@ function Certificates() {
                 <span style={{ color: 'var(--muted)', fontSize: '0.78rem', marginLeft: 'auto' }}>{c.date}</span>
               </div>
               <p style={{ color: 'var(--text)', fontSize: '0.9rem', fontWeight: 500, lineHeight: 1.5 }}>{c.title}</p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                <span style={{ fontSize: '0.8rem' }}>🏆</span>
-                <span style={{ color: 'var(--muted)', fontSize: '0.78rem' }}>Certified</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', justifyContent: 'space-between', marginTop: 'auto', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <span style={{ fontSize: '0.8rem' }}>🏆</span>
+                  <span style={{ color: 'var(--muted)', fontSize: '0.78rem' }}>Certified</span>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  {c.viewUrl && (
+                    <a href={c.viewUrl} target="_blank" rel="noreferrer" style={{
+                      padding: '0.35rem 0.8rem',
+                      borderRadius: '6px',
+                      fontSize: '0.75rem',
+                      fontWeight: 600,
+                      background: `${issuerColors[c.issuer] || '#6c63ff'}15`,
+                      color: issuerColors[c.issuer] || '#6c63ff',
+                      textDecoration: 'none',
+                      transition: 'all 0.2s',
+                      whiteSpace: 'nowrap',
+                      border: `1px solid ${issuerColors[c.issuer] || '#6c63ff'}30`,
+                    }}
+                      onMouseEnter={e => { e.currentTarget.style.background = `${issuerColors[c.issuer] || '#6c63ff'}25`; }}
+                      onMouseLeave={e => { e.currentTarget.style.background = `${issuerColors[c.issuer] || '#6c63ff'}15`; }}
+                    >👁 View</a>
+                  )}
+                  {c.downloadUrl && (
+                    <a href={c.downloadUrl} download style={{
+                      padding: '0.35rem 0.8rem',
+                      borderRadius: '6px',
+                      fontSize: '0.75rem',
+                      fontWeight: 600,
+                      background: `${issuerColors[c.issuer] || '#6c63ff'}20`,
+                      color: issuerColors[c.issuer] || '#6c63ff',
+                      textDecoration: 'none',
+                      transition: 'all 0.2s',
+                      whiteSpace: 'nowrap',
+                    }}
+                      onMouseEnter={e => { e.currentTarget.style.background = `${issuerColors[c.issuer] || '#6c63ff'}35`; }}
+                      onMouseLeave={e => { e.currentTarget.style.background = `${issuerColors[c.issuer] || '#6c63ff'}20`; }}
+                    >↓ Download</a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
